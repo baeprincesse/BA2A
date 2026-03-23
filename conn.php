@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
 $db = 'ecommerce_app';
-$user = 'root';
-$pass = '';
+$user = 'ecom_user';       // Dedicated app user (required on Ubuntu/EC2)
+$pass = 'StrongPass123!';  // Change this to your preferred password
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";

@@ -4,6 +4,7 @@ module.exports = {
       name: "ecommerce_app",
       script: "/usr/bin/php",
       args: "-S 0.0.0.0:8000 -t .",
+      interpreter: "none",
       watch: false,
       instances: 1,
       exec_mode: "fork",
