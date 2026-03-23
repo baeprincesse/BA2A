@@ -15,6 +15,14 @@ $options = [
 try {
     $pdo = new PDO($dsn, $user, $pass, $options);
 } catch (\PDOException $e) {
-    throw new \PDOException($e->getMessage(), (int)$e->getCode());
+    // Log the error securely
+    error_log(date('[Y-m-d H:i:s] ') . "Connection failed: " . $e->getMessage() . PHP_EOL, 3, __DIR__ . '/db_errors.log');
+    
+    // Display a user-friendly error message
+    http_response_code(500);
+    die("<html><body style='text-align:center; padding:50px; font-family:sans-serif;'>
+            <h1>Service Unavailable</h1>
+            <p>We are currently experiencing technical difficulties connecting to our database. Please try again later.</p>
+         </body></html>");
 }
 ?>
