@@ -1,8 +1,8 @@
 module.exports = {
   apps: [
     {
-      name: "ecommerce-app",
-      script: "php",
+      name: "ecommerce_app",
+      script: "/usr/bin/php",
       args: "-S 0.0.0.0:8000 -t .",
       watch: false,
       instances: 1,
