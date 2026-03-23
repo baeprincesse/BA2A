@@ -14,7 +14,7 @@ echo "======================================"
 # 1. Install required packages
 echo "[1/5] Installing PHP, MySQL, Node.js, PM2..."
 sudo apt-get update -qq
-sudo apt-get install -y php-cli php-mysql mysql-server nodejs npm -qq
+sudo apt-get install -y php-cli php-mysql mariadb-server nodejs npm -qq
 sudo npm install -g pm2 --silent
 
 # 2. Secure MySQL and create the app user
